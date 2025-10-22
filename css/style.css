@@ -1,0 +1,992 @@
+/* ===== ПЕРЕМЕННЫЕ ДЛЯ ДИЗАЙНА ===== */
+:root {
+    --primary-color: #2c3e50;      /* Основной темно-синий цвет */
+    --secondary-color: #3498db;    /* Вторичный синий цвет */
+    --accent-color: #e74c3c;       /* Акцентный красный цвет для кнопок */
+    --text-color: #333;            /* Цвет основного текста */
+    --light-bg: #ecf0f1;          /* Светлый фон для секций */
+    --white: #fff;                 /* Белый цвет */
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для карточек */
+    --border-radius: 8px;          /* Скругление углов */
+}
+
+/* ===== ОСНОВНЫЕ СТИЛИ ===== */
+html {
+    scroll-behavior: smooth; /* Плавная прокрутка по якорям */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Учет padding и border в ширине */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота на весь экран */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== ШАПКА САЙТА ===== */
+.header {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky; /* Липкая шапка при прокрутке */
+    top: 0;
+    z-index: 1000; /* Поверх других элементов */
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+/* Навигационное меню */
+.nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* ===== ГЛАВНАЯ СЕКЦИЯ (HERO) ===== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+    flex: 1; /* Занимает все доступное пространство */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* ===== КНОПКИ ===== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: 0 0.5rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px); /* Эффект поднятия */
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* ===== СЕКЦИЯ ПРЕИМУЩЕСТВ ===== */
+.features {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px); /* Эффект поднятия при наведении */
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+/* ===== СЕКЦИЯ МАТЕРИАЛОВ ===== */
+.materials {
+    padding: 5rem 0;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.material-item {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.material-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; /* Сохранение пропорций изображения */
+    margin-bottom: 1rem;
+}
+
+/* ===== СЕКЦИЯ ПРЕИМУЩЕСТВ (вместо калькулятора) ===== */
+.advantages {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.advantage-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+}
+
+.advantage-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== СЕКЦИЯ ОТЗЫВОВ ===== */
+.reviews {
+    padding: 5rem 0;
+    background: var(--light-bg);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.review-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.review-avatar {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.review-author strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--primary-color);
+}
+
+.review-rating {
+    color: #ffc107;
+    font-size: 1.1rem;
+}
+
+.review-content {
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* ===== ГАЛЕРЕЯ ПРОЕКТОВ ===== */
+.gallery {
+    padding: 5rem 0;
+}
+
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap; /* Перенос на мобильных */
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    border-radius: var(--border-radius);
+    overflow: hidden; /* Скрыть выходящие за границы элементы */
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Заполнение контейнера с обрезкой */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+
+/* ===== ДЕТАЛЬНЫЕ КАРТОЧКИ УСЛУГ ===== */
+.services-detailed {
+    padding: 4rem 0;
+}
+
+.service-detailed-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin-bottom: 4rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--white);
+}
+
+.service-image {
+    position: relative;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+.service-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8)); /* Градиентный оверлей */
+    color: var(--white);
+    padding: 2rem;
+}
+
+.service-overlay h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.service-content {
+    padding: 2rem;
+}
+
+.service-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+}
+
+.service-benefits {
+    list-style: none;
+    padding: 0;
+}
+
+.service-benefits li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-benefits li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* ===== СТИЛИ СТРАНИЦЫ "О КОМПАНИИ" ===== */
+.about-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 5rem 0;
+    align-items: center;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.achievement {
+    padding: 1.5rem;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+}
+
+.achievement-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.values-list {
+    display: grid;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.value-item {
+    padding: 1.5rem;
+    background: var(--white);
+    border-left: 4px solid var(--secondary-color); /* Акцентная полоса слева */
+    box-shadow: var(--shadow);
+}
+
+.value-item h4 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.partners {
+    padding: 5rem 0;
+    background: var(--light-bg);
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    text-align: center;
+}
+
+.partner-logo {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.partner-logo:hover {
+    transform: translateY(-5px);
+}
+
+.partner-logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* ===== СТИЛИ СТРАНИЦЫ "КОНТАКТЫ" ===== */
+.contacts-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.contacts-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 5rem 0;
+    align-items: start;
+}
+
+.contact-info {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* ===== СТИЛИ ДЛЯ ФОРМЫ ОБРАТНОЙ СВЯЗИ ===== */
+.contact-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.contact-form h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* Стили для групп формы */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+/* Стили для полей ввода */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #e1e5e9;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Стили для кнопки отправки */
+.contact-form .btn-primary {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Стили для контактных элементов с иконками */
+.contact-details {
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.contact-item:hover {
+    background: #e3f2fd;
+    border-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    opacity: 0.8;
+    /* Фильтр для окрашивания SVG в синий цвет */
+    filter: brightness(0) saturate(100%) invert(26%) sepia(89%) saturate(748%) hue-rotate(183deg) brightness(93%) contrast(88%);
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-text strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+}
+
+.contact-text a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-text a:hover {
+    color: var(--secondary-color);
+}
+
+/* Карта */
+.map {
+    height: 400px; /* Увеличиваем высоту */
+    background-color: #eee;
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.map iframe {
+    filter: grayscale(20%); /* Легкий градиент для стиля */
+    transition: filter 0.3s ease;
+}
+
+.map iframe:hover {
+    filter: grayscale(0%);
+}
+
+/* ===== СТИЛИ ДЛЯ ЗАГРУЗКИ ФАЙЛОВ ===== */
+/* Скрываем стандартную кнопку выбора файлов */
+.file-upload input[type="file"] {
+    display: none; /* Полностью скрываем стандартный input file */
+}
+
+/* Стили для красивой области загрузки файлов */
+.file-upload {
+    border: 2px dashed #ddd;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--light-bg);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.file-upload:hover {
+    border-color: var(--secondary-color);
+    background: #f8f9fa;
+}
+
+.file-upload.dragover {
+    border-color: var(--secondary-color);
+    background: #e3f2fd;
+}
+
+/* Иконка скрепки до выбора файла */
+.file-upload::before {
+    content: "📎";
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.file-name {
+    color: #666;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Стиль когда файл выбран */
+.file-upload.has-file {
+    border-color: var(--secondary-color);
+    background: #e8f4fd;
+}
+
+/* Иконка галочки когда файл выбран */
+.file-upload.has-file::before {
+    content: "✅";
+}
+
+/* Стили для кнопки удаления файла */
+.remove-file {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.remove-file:hover {
+    background: #c0392b;
+}
+
+/* Убираем стандартный маркер для списка файлов */
+.file-name ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.file-name li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.25rem 0;
+}
+
+/* Убираем отступ у form-group для загрузки файлов */
+.form-group:has(.file-upload) {
+    margin-bottom: 0;
+}
+
+/* Стили для загрузки */
+.loading-spinner {
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* ===== ПОДВАЛ САЙТА ===== */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+    margin-top: auto; /* Прижимаем подвал к низу */
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer a {
+    color: var(--light-bg);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== АНИМАЦИИ И ЭФФЕКТЫ ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== УЛУЧШЕННАЯ АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ===== */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        padding: 0.5rem 20px;
+    }
+    
+    .logo {
+        margin-bottom: 0.5rem;
+    }
+    
+    .logo-img {
+        height: 40px; /* Уменьшаем логотип на мобильных */
+    }
+    
+    .nav {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    
+    .nav a {
+        margin: 0 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        white-space: nowrap; /* Запрещаем перенос текста */
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .btn {
+        display: block;
+        margin: 0.5rem auto;
+        width: 90%;
+        max-width: 250px;
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Улучшаем отображение контента */
+    .about-content,
+    .contacts-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+    
+    .service-detailed-card {
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+    }
+    
+    .service-image {
+        height: 250px;
+        min-height: 250px; /* Фиксируем высоту */
+    }
+    
+    .service-features {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    .gallery-filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        width: 90%;
+        max-width: 200px;
+    }
+    
+    /* Улучшаем отступы */
+    .features,
+    .materials,
+    .advantages,
+    .reviews,
+    .gallery {
+        padding: 3rem 0;
+    }
+    
+    .feature-card,
+    .advantage-card,
+    .review-card {
+        padding: 1.5rem;
+    }
+    
+    /* Исправляем контактные элементы */
+    .contact-item {
+        padding: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-icon {
+        width: 18px;
+        height: 18px;
+        margin-right: 0.8rem;
+    }
+    
+    /* Улучшаем форму на мобильных */
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 0.7rem 0.8rem;
+        font-size: 16px; /* Предотвращает масштабирование в iOS */
+    }
+    
+    /* Адаптивность отзывов */
+    .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Дополнительные исправления для очень маленьких экранов */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    .hero {
+        padding: 4rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .nav a {
+        margin: 0 0.3rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .features-grid,
+    .materials-grid,
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Улучшаем touch-цели для мобильных */
+    .nav a,
+    .btn,
+    .filter-btn,
+    .file-upload {
+        min-height: 44px; /* Минимальный размер touch-цели */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Улучшаем читаемость текста */
+    body {
+        font-size: 16px; /* Предотвращает масштабирование в iOS */
+        -webkit-text-size-adjust: 100%; /* Фикс для iOS */
+    }
+}
