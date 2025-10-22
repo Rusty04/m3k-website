@@ -184,11 +184,37 @@ body {
     padding: 1.5rem;
 }
 
+/* ===== УЛУЧШЕННЫЕ СТИЛИ ДЛЯ ФОТО МАТЕРИАЛОВ ===== */
 .material-item img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain; /* Сохранение пропорций изображения */
+    width: 100%;
+    height: 200px; /* Для пропорций 500x400px */
+    object-fit: cover; /* Заполнение с обрезкой */
     margin-bottom: 1rem;
+    border-radius: 8px; /* Скругление углов */
+    border: 3px solid #2c3e50; /* Тёмно-синяя обводка как в primary-color */
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.2); /* Тень в тон обводки */
+    transition: all 0.3s ease;
+    background: var(--white); /* Фон на случай прозрачности */
+}
+
+.material-item img:hover {
+    transform: translateY(-5px); /* Эффект поднятия */
+    box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3); /* Усиленная тень при наведении */
+    border-color: #1a252f; /* Более тёмный синий при наведении */
+}
+
+/* Увеличиваем карточки материалов */
+.material-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.material-item:hover {
+    transform: translateY(-3px);
 }
 
 /* ===== СЕКЦИЯ ПРЕИМУЩЕСТВ (вместо калькулятора) ===== */
