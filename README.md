@@ -21,20 +21,45 @@
 
 ## 📁 Структура проекта
 m3k-website/
-├── .gitignore # Игнорируемые файлы
-├── config.example.php # Шаблон конфигурации
-├── index.html # Главная страница
-├── services.html # Услуги
-├── about.html # О компании
-├── contacts.html # Контакты
-├── css/
-│ └── style.css # Стили
-├── js/
-│ └── script.js # JavaScript
-├── images/
-│ └── logo.jpg # Логотип
-├── telegram-bot.php # Обработчик форм для Telegram
-└── README.md # Документация
+├── 📄 index.html                          # Главная страница
+├── 📄 services.html                       # Услуги
+├── 📄 about.html                          # О компании
+├── 📄 contacts.html                       # Контакты
+├── 📄 telegram-bot.php                    # Обработчик форм для Telegram
+├── 📄 config.example.php                  # Шаблон конфигурации
+├── 📄 README.md                           # Документация
+├── 🔒 .gitignore                          # Игнорируемые файлы Git
+│
+├── 📁 css/                                # Стили
+│   └── 📄 style.css                       # Главный файл стилей
+│
+├── 📁 js/                                 # JavaScript
+│   └── 📄 script.js                       # Главный файл скриптов
+│
+└── 📁 images/                             # Изображения
+    ├── 📄 logo.jpg                        # Логотип компании
+    │
+    ├── 📁 favicon/                        # Фавиконы
+    │   ├── 📄 favicon.ico                 # Основной фавикон
+    │   ├── 📄 favicon-96x96.png           # 96x96 версия
+    │   └── 📄 apple-touch-icon.png        # Для Apple устройств
+    │
+    ├── 📄 ldsp-material.jpg               # ЛДСП (500x400px)
+    ├── 📄 pvc-material.jpg                # Кромка ПВХ (500x400px)
+    ├── 📄 fittings-material.jpg           # Фурнитура (500x400px)
+    ├── 📄 paint-material.jpg              # Краски (500x400px)
+    │
+    ├── 📄 cutting-bg.jpg                  # Фон услуги "Распил" (800x600px)
+    ├── 📄 edging-bg.jpg                   # Фон услуги "Кромление" (800x600px)
+    ├── 📄 milling-bg.jpg                  # Фон услуги "Фрезеровка" (800x600px)
+    ├── 📄 assembly-bg.jpg                 # Фон услуги "Сборка" (800x600px)
+    │
+    ├── 📄 school-project1.jpg             # Проект для школы 1
+    ├── 📄 school-project2.jpg             # Проект для школы 2
+    ├── 📄 kindergarten-project1.jpg       # Проект для детсада 1
+    ├── 📄 kindergarten-project2.jpg       # Проект для детсада 2
+    ├── 📄 office-project1.jpg             # Офисный проект 1
+    └── 📄 office-project2.jpg             # Офисный проект 2
 
 ## 🎯 Особенности
 
