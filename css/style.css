@@ -215,7 +215,7 @@ body {
 
 .material-item:hover {
     transform: translateY(-3px);
-}
+}					
 
 /* ===== СЕКЦИЯ ПРЕИМУЩЕСТВ (вместо калькулятора) ===== */
 .advantages {
@@ -379,21 +379,31 @@ body {
     background: var(--white);
 }
 
+/* Улучшение фоновых изображений услуг */
 .service-image {
     position: relative;
     height: 400px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f8f9fa; /* Фон если изображение не загрузится */
 }
 
+/* Затемнение для лучшей читаемости текста */
 .service-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.8)); /* Градиентный оверлей */
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
     color: var(--white);
     padding: 2rem;
+}
+
+/* Эффект при наведении на карточку услуги */
+.service-detailed-card:hover .service-image {
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
 }
 
 .service-overlay h3 {
